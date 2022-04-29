@@ -21,6 +21,18 @@ describe('dropdowns and checkboxes', function()
         //how to compare 2 strings with mocha
         expect(str).to.equal('Hello , Are you sure you want to confirm?')
         })
+
+        //navigating within the browser
+        // Below opens a link in the current windo instead of in a new tab
+        cy.get('#opentab').invoke('removeAttr', 'target').click();
+
+        // This gets current URL
+        cy.url().should('include', 'https://www.rahulshettyacademy.com/')
+
+        // below just goes back in the browser history
+        cy.go('back')
+
+
     })
 })
 
