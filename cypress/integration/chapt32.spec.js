@@ -25,12 +25,17 @@ describe('dropdowns and checkboxes', function()
             expect(str).to.equal('Hello , Are you sure you want to confirm?')
         })
 
-        // Dealing with separate windows/browser tabs
-        cy.get('#opentab').invoke('removeAttr', 'target').click()
+        //navigating within the browser
+        // Below opens a link in the current windo instead of in a new tab
+        cy.get('#opentab').invoke('removeAttr', 'target').click();
 
-        // navigating forward and backwards in browser history
+        // This gets current URL
+        cy.url().should('include', 'https://www.rahulshettyacademy.com/')
+
+        // below just goes back in the browser history
         cy.go('back')
-    cy.end()
+
+
     })
 })
 

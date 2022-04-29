@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "cypress": "^9.5.4",
+=======
+    "cypress": "^9.6.0",
+    "cypress-iframe": "^1.0.1",
+>>>>>>> 74ca6620be6d73a09736a4f0d9e95071d8f62d40
     "eslint-plugin-cypress": "^2.12.1"
   },
   "dependencies": {
