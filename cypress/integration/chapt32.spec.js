@@ -32,6 +32,7 @@ describe('dropdowns and checkboxes', function()
         // below just goes back in the browser history
         cy.go('back')
 
+        //using strings to navigate and search a table.
 
     })
 })
