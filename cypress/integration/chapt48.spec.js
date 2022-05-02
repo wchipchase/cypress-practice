@@ -11,7 +11,13 @@ describe('It should get a collection of web elements and then select an individu
     it('It should get a collection of web elements and then select an individual element based on text', () => {
         cy.visit('https://rahulshettyacademy.com/angularpractice/')
         cy.get('[href="/angularpractice/shop"]').click();
-        cy.selectProduct('Blackberry')
+        const companies = ["Apple", "Google", "Facebook"];
+
+        globalThis.data.productName.forEach(function(element) {
+            
+            cy.selectProduct(element)
+        });
+        
         cy.get('.btn-primary').click();
         cy.get('.btn-success').click();
     })
