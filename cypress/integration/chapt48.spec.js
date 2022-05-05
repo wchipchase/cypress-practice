@@ -17,7 +17,9 @@ describe('It should get a collection of web elements and then select an individu
             
             cy.selectProduct(element)
         });
-        
+
+        // Use cy.pause for debugging
+        cy.pause();
         cy.get('.btn-primary').click();
         cy.get('.btn-success').click();
     })
